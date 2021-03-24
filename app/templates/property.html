@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<!--container for the page content-->
+<div class="container">
+    <h1 class="page-header">Add New Property</h1>
+
+    <!--form with the required fields for adding a profile-->
+    <div class="form">
+
+        <form id="property" name="" method="POST" enctype="multipart/form-data">
+
+            <h5 class="title">{{form.title.label}}</h5>
+            {{form.title(class='formControl',class='title')}}
+            <br>
+        
+            <h5 class="description">{{form.description.label}}</h5>
+            {{form.description(class='formControl',class='description')}}
+            <br>
+        
+            
+            <h5 class="rooms">{{form.rooms.label}}</h5>
+            {{form.rooms(class='formControl', class='bed',placeholder='3')}}
+            <br>
+            
+            <h5 class="bathrooms">{{form.bathrooms.label}}</h5>
+            {{form.bathrooms(class='formControl',class='room',placeholder='3')}}
+            <br>
+
+            <div class="form-group">
+            <h5 class="price">{{form.price.label}}</h5>
+           {{form.price(class='formControl',class='price',placeholder='15,000,000')}}
+            <br>
+    
+            <h5 class="propertyType">{{form.propertyType.label}}</h5>
+            {{form.propertyType(class='formControl',class='typee', placeholder='House')}}
+            <br>
+          </div>
+            
+              <h5 class="location">{{form.location.label}}</h5>  
+            {{form.location(class='formControl', class='location', placeholder='e.g. 10 Waterloo Road')}}
+            <br>
+                
+
+            <h5 class="phototitle">{{form.photo.label}}</h5>
+            {{form.photo}}
+            <br>
+
+            <button name="browse" class="btn btn-primary" type="browse">Add Property</button>
+            <br>
+        </form>
+    </div>
+</div>
+{% endblock %}
